@@ -1,0 +1,47 @@
+project "DiscordAPI"
+	kind "StaticLib"
+	language "C++"
+	cppdialect "C++20"
+    staticruntime "Off"
+	warnings "Off"
+	targetdir ("../bin/%{cfg.buildcfg}")
+	objdir ("../bin-int/%{prj.name}/%{cfg.buildcfg}")
+
+	includedirs{
+		"source/",
+		"../Discord-RPC/include/",
+	}
+
+	files {
+		"source/**.h",
+		"source/**.cpp",
+	}
+
+	links {
+	}
+
+	linkoptions {
+	}
+
+	defines {
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+	filter "configurations:Debug"
+		defines{"_DEBUG"}
+		runtime "Debug"
+        optimize "off"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines{"NDEBUG"}
+		runtime "Release"
+		optimize "on"
+        symbols "on"
+
+    filter "configurations:ShipIt"
+        runtime "Release"
+        optimize "on"
+        symbols "off"

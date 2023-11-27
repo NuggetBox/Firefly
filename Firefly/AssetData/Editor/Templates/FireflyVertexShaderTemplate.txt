@@ -1,0 +1,55 @@
+#include <Includes/VertexCommon.hlsli>
+
+
+struct PixelInput
+{
+    float4 position : SV_POSITION;
+    float4 worldPosition : POSITION;
+    float3 RotatedNormal : RotNormal;
+    float2 texcoord0 : UV0;
+    float2 texcoord1 : UV1;
+    float2 texcoord3 : UV2;
+    float2 texcoord2 : UV3;
+    float4 color0 : COLOR0;
+    float4 color1 : COLOR1;
+    float4 color2 : COLOR2;
+    float4 color3 : COLOR3;
+    float3 normal : NORMAL;
+    float3x3 tangentBias : TBASIS;
+    float entityTime : ENTITYTIME;
+};
+
+PixelInput main(VertexInput vInput, uint instanceID : SV_InstanceID)
+{
+    PixelInput pInput;
+    
+    InstanceData instanceData = FetchInstanceData(instanceID);
+    
+    float4x4 skinningMatrix = CreateSkinningMatrix(vInput.boneWeights, vInput.boneIds, instanceData, instanceID);
+    
+    pInput.position = ProjectPosition(vInput.position, skinningMatrix, instanceData);
+    pInput.worldPosition = TransformPosition(vInput.position, skinningMatrix, instanceData);
+    pInput.texcoord0 = vInput.texcoord0;
+    pInput.normal = vInput.normal;
+    
+    pInput.color0 = vInput.color0;
+    pInput.color1 = vInput.color1;
+    pInput.color2 = vInput.color2;
+    pInput.color3 = vInput.color3;
+
+    pInput.texcoord0 = vInput.texcoord0;
+    pInput.texcoord1 = vInput.texcoord1;
+    pInput.texcoord2 = vInput.texcoord2;
+    pInput.texcoord3 = vInput.texcoord3;
+
+    pInput.entityTime = FetchEntityTime(instanceData);
+
+    const float3 newTangent = TransformVector(vInput.tangent, skinningMatrix, instanceData);
+    const float3 newBiTangent = TransformVector(vInput.biTangent, skinningMatrix, instanceData);
+    const float3 newNormal = TransformVector(vInput.normal, skinningMatrix, instanceData);
+
+    pInput.RotatedNormal = newNormal;
+    pInput.tangentBias = CreateTBN(newNormal, newBiTangent, newTangent);
+    
+    return pInput;
+}

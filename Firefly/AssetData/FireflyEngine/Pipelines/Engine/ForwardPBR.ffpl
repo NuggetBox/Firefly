@@ -1,0 +1,19 @@
+{
+  "PipelineID": 16665830735797483037,
+
+  "DepthState": "ReadWrite",
+  "CullState": "Back",
+  "BlendState": "Opaque",
+
+  "Vertex": true,
+  "Geometry": false,
+  "Pixel": true,
+
+  "Deferred": false,
+
+  "VertexPath": "FireflyEngine/Shaders/Engine/StaticMesh_vs.hlsl",
+
+  "GeometryPath": "",
+
+  "PixelPath": "FireflyEngine/Shaders/Engine/ForwardPBR_ps.hlsl"
+}

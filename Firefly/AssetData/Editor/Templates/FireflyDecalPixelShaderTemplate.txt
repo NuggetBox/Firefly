@@ -1,0 +1,47 @@
+#include <Includes/FireflyShader.hlsli>
+
+struct Output
+{
+    float4 Albedo : SV_TARGET0;
+    float4 Normal : SV_TARGET1;
+    float4 Material : SV_TARGET2;
+};
+
+struct PixelInputDecal
+{
+    float4 position : SV_POSITION;
+    float4 worldPosition : POSITION;
+    float3 viewPosition : WORLDPOSITION;
+    float4x4 InverseMat : INVMAT;
+};
+
+Texture2D u_AlbedoTexture : register(t2);
+Texture2D u_DepthTexture_Engine : register(t20);
+Texture2D u_WorldTexture_Engine : register(t21);
+
+
+cbuffer MaterialInfo : register(b10)
+{
+    float4 Albedo_Color = float4(1,1,1,1); // With _Color after the name it will be a color variable in the editor.
+}
+
+Output main(PixelInputDecal pInput)
+{
+    Output outer = (Output)0;
+    
+    float2 screenPos = pInput.position.xy / resolution;
+   
+    
+    float4 worldPosition = u_WorldTexture_Engine.Sample(ClampSampler, screenPos);
+    float3 objectPosition = mul(pInput.InverseMat, worldPosition).xyz;
+    clip(50.f - abs(objectPosition));
+    
+    const float2 sampleCoords = -(objectPosition.xy / 100.f) + 0.5f;
+    
+    outer.Albedo = u_AlbedoTexture.Sample(ClampSampler, sampleCoords);
+ 
+
+    outer.Albedo *= Albedo_Color;
+
+    return outer;
+}

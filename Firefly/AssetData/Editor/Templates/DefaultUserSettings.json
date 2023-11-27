@@ -1,0 +1,34 @@
+{
+  "Windows": [
+    {
+      "FactoryName": "Viewport",
+      "OpenFlag": true
+    },
+    {
+      "FactoryName": "Inspector",
+      "OpenFlag": true
+    },
+    {
+      "FactoryName": "Hierarchy",
+      "OpenFlag": true
+    },
+    {
+      "FactoryName": "ContentBrowser",
+      "OpenFlag": true
+    }
+  ],
+  "PerforceUserSettings": [
+    {
+      "Username": ""
+    },
+    {
+      "Password": ""
+    },
+    {
+      "Client": ""
+    },
+    {
+      "Server": ""
+    }
+  ]
+}

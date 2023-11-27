@@ -1,0 +1,19 @@
+#include <Includes/FullscreenPassShader.hlsli>
+#include <Includes/ConstStructs.hlsli>
+#include <Includes/PostProcessStructs.hlsli>
+
+Texture2D u_SceneColor_Engine : register(t20);
+Texture2D u_SceneDepth_Engine : register(t21);
+Texture2D u_SceneWorldPosition_Engine : register(t22);
+Texture2D u_SceneWorldNormals_Engine : register(t23);
+
+cbuffer MaterialInfo : register(b10)
+{
+    float4 AlbedoColor_Color = float4(1, 1, 1, 1);
+}
+
+
+float4 main(VertextoPixel input) : SV_Target
+{
+    return u_SceneColor_Engine.Sample(ClampSampler, input.uv) * AlbedoColor_Color;
+}

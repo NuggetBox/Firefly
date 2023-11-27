@@ -1,0 +1,25 @@
+{
+  "PipelineID": 16382186296439120301,
+  
+  "DepthState": "ReadWrite",
+  "CullState": "Back",
+  "BlendState": "Opaque",
+  
+  "Textures": [
+    {
+      "BindPoint": 0,
+      "ShaderStage": "Pixel",
+      "TexturePath": "FireflyEngine\\Defaults\\Textures\\T_Default_C.dds"
+    },
+    {
+      "BindPoint": 1,
+      "ShaderStage": "Pixel",
+      "TexturePath": "FireflyEngine\\Defaults\\Textures\\T_Default_N.dds"
+    },
+    {
+      "BindPoint": 2,
+      "ShaderStage": "Pixel",
+      "TexturePath": "FireflyEngine\\Defaults\\Textures\\T_Default_M.dds"
+    }
+  ]
+}
