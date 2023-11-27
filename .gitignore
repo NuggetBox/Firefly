@@ -1,32 +1,25 @@
-# Prerequisites
-*.d
+Firefly/.vs/
+Firefly/bin-int/
+Firefly/bin/
+Firefly/AssetData/User/
+Firefly/AssetData/Editor/CompiledAssets
+FMOD/.cache
+FMOD/.unsaved
+FMOD/.user
+Firefly/Build
+FireflyEngine/Shaders-bin/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.user
+*.filter
+*.ini
+*.ffcs
+*.aps
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+!premake5.exe
+**.pdb
+!AssetData/Firefly.pdb
+!AssetData/Zenith.pdb
+**.idb
