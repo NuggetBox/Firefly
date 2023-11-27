@@ -130,7 +130,6 @@
 
 	//Teleport
 #define EVENT_Interact_Teleport														"event:/SFX/HealingCrystal/Pickup"
-#define EVENT_Interact_Teleport														"event:/SFX/HealingCrystal/Idle"
 
 	//Door
 #define EVENT_Interact_Door_Open													"event:/SFX/Interact/DoorOpen"

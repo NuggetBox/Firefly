@@ -27,7 +27,6 @@ project "Launcher"
 		"../Vendor/include/",
 		"../Vendor/include/FMOD/",
 		"../SoundEngine/source/",
-		"../PerforceWrapper/source/",
 		"../ImGuiNodeEditor/source/",
 		"../MuninGraph/",
 		"../PhysX/include/"
@@ -56,7 +55,6 @@ project "Launcher"
 		"FBXImporter",
 		"DDSTextureLoader",
 		"SoundEngine",
-		"PerforceWrapper",
 		"Netapi32.lib",
 		"meshoptimizer",
 		"Discord-RPC",
