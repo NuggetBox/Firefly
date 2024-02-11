@@ -41,7 +41,7 @@ private:
 
 	void ResetEditor();
 
-	const char* myDefaultTexturePath = "Assets/Textures/ParticleStar.dds";
+	const char* myDefaultTexturePath = "FireflyEngine/Defaults/Textures/ParticleStar.dds";
 
 	uint32_t mySceneID;
 	Ref<EditorCamera> myEditorCamera;

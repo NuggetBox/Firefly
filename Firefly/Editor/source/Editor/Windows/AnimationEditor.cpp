@@ -46,7 +46,7 @@ AnimationEditor::AnimationEditor()
 	myPyramidMesh = Firefly::ResourceCache::GetAsset<Firefly::Mesh>("PyramidBottomPivot");
 	myBoneMaterial = Firefly::ResourceCache::GetAsset<Firefly::MaterialAsset>("Editor/AnimationEditor/BoneMaterial.mat");
 
-	mySphereMesh = Firefly::ResourceCache::GetAsset<Firefly::Mesh>("Assets/Graphical Assets/Sphere.mesh", true);
+	mySphereMesh = Firefly::ResourceCache::GetAsset<Firefly::Mesh>("FireflyEngine/Defaults/Sphere.mesh", true);
 
 
 	myPlayButtonTexture = Firefly::ResourceCache::GetAsset<Firefly::Texture2D>("Editor/Icons/icon_play.dds", true);

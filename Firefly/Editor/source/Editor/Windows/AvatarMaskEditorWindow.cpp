@@ -428,7 +428,6 @@ void AvatarMaskEditorWindow::DrawViewport()
 	const auto initialWindowPos = ImGui::GetWindowPos();
 	const auto initialMousePos = ImGui::GetMousePos();
 	Utils::Vector2f mousePos = Utils::Vector2f(initialMousePos.x - initialWindowPos.x, initialMousePos.y - initialWindowPos.y);
-	LOGINFO("MousePos: {}, {}", mousePos.x, mousePos.y);
 
 	if (ImGui::IsMouseClicked(ImGuiMouseButton_Left) && ImGui::IsWindowHovered())
 	{

@@ -1,0 +1,10 @@
+{
+    "Deferred": false,
+    "Geometry": false,
+    "GeometryPath": "",
+    "PipelineID": 4069037737555710238,
+    "Pixel": true,
+    "PixelPath": "FireflyEngine\\Shaders\\Engine\\BonePipeline_ps.hlsl",
+    "Vertex": true,
+    "VertexPath": "FireflyEngine\\Shaders\\Engine\\BonePipeline_vs.hlsl"
+}

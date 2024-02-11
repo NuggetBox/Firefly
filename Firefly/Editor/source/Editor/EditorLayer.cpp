@@ -81,7 +81,7 @@ EditorLayer::EditorLayer()
 	EditorUtils::CreateUserFolder();
 
 	myBuildFolder = std::filesystem::current_path().parent_path().string() + "\\Build\\";
-	myScenesToIncludeInBuild.push_back("Assets/Scenes/CoreScene.scene");
+	/*myScenesToIncludeInBuild.push_back("Assets/Scenes/CoreScene.scene");
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/Corridor.scene");
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/MainMenuOffice.scene");
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/MainMenuDocks.scene");
@@ -89,7 +89,7 @@ EditorLayer::EditorLayer()
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/Levels/LVL_00_Tutorial.scene");
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/Levels/LVL_01_Docks.scene");
 	myScenesToIncludeInBuild.push_back("Assets/Scenes/Levels/LVL_02_Factory.scene");
-	myScenesToIncludeInBuild.push_back("Assets/Scenes/Levels/LVL_04_Shipping.scene");
+	myScenesToIncludeInBuild.push_back("Assets/Scenes/Levels/LVL_04_Shipping.scene");*/
 }
 
 void EditorLayer::OnAttach()

@@ -1,11 +1,11 @@
 {
     "Deferred": false,
     "Geometry": true,
-    "GeometryPath": "FireflyEngine\\Pipelines\\Custom\\ParticleDefault\\ParticleDefault_gs.hlsl",
+    "GeometryPath": "FireflyEngine\\Shaders\\Engine\\ParticleDefault\\ParticleDefault_gs.hlsl",
     "PipelineID": 6955484806259956861,
     "Pixel": true,
-    "PixelPath": "FireflyEngine\\Pipelines\\Custom\\ParticleDefault\\ParticleDefault_ps.hlsl",
+    "PixelPath": "FireflyEngine\\Shaders\\Engine\\ParticleDefault\\ParticleDefault_ps.hlsl",
     "PostProcess": false,
     "Vertex": true,
-    "VertexPath": "FireflyEngine\\Pipelines\\Custom\\ParticleDefault\\ParticleDefault_vs.hlsl"
+    "VertexPath": "FireflyEngine\\Shaders\\Engine\\ParticleDefault\\ParticleDefault_vs.hlsl"
 }

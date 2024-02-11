@@ -20,6 +20,7 @@ namespace Firefly
 			break;
 		}
 		std::ifstream fin(finalPath, std::ios::ate | std::ios::binary);
+		assert(fin.good() && L"No file exists at include path");
 		const auto fileSize = static_cast<size_t>(fin.tellg());
 
 		char* buffer = new char[fileSize];

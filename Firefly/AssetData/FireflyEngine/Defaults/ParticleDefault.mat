@@ -1,1 +1,7 @@
-{"BlendState":"AlphaBlend","CullState":"Back","DepthState":"ReadOnly","IsFPS":false,"MaterialData":[],"PipelineID":6955484806259956861,"ShouldBlend":false,"Textures":[{"BindPoint":0,"ShaderStage":"Pixel","TexturePath":""}]}
+{"BlendState":"AlphaBlend","CullState":"Back","DepthState":"ReadOnly","IsFPS":false,"MaterialData":[],"PipelineID":6955484806259956861,"ShouldBlend":false,
+"Textures": [
+    {
+      "BindPoint": 0,
+      "ShaderStage": "Pixel",
+      "TexturePath": "FireflyEngine\\Defaults\\Textures\\ParticleStar.dds"
+    }]}

@@ -11,6 +11,7 @@ namespace Firefly
 		Parse("FireflyEngine/Pipelines/Engine/DeferredPBR.ffpl", "DefaultOpaque");
 		Parse("FireflyEngine/Pipelines/Engine/ForwardPBR.ffpl", "DefaultTransparent");
 		Parse("FireflyEngine/Pipelines/Engine/ParticleDefault.ffpl", "DefaultParticle");
+		Parse("FireflyEngine/Pipelines/Engine/BonePipeline.ffpl", "AnimationEditorBonePipeline");
 		LoadCustomPipelines("Assets/");
 	}
 	GraphicsPipelineInfo PipelineImporter::GetInfoFromPath(const std::filesystem::path& aFilepath)

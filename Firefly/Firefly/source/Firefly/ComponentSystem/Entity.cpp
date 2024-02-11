@@ -26,9 +26,6 @@ namespace Firefly
 
 	Entity::~Entity()
 	{
-#ifndef FF_INLAMNING
-		LOGERROR("Entity was decontructed! Name: {}", myName);
-#endif
 	}
 
 	Ptr<Entity> Entity::Duplicate(Ptr<Entity> aEntityToCopy, Scene* aParentScene, bool aNewIDFlag, uint64_t aPrefabRootEntityID)
